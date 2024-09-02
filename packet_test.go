@@ -3,7 +3,7 @@ package gmf_test
 import (
 	"testing"
 
-	"github.com/3d0c/gmf"
+	"github.com/harmreijnen/gmf"
 )
 
 func TestFramesIterator(t *testing.T) {

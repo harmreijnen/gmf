@@ -1,3 +1,4 @@
+//go:build go1.12
 // +build go1.12
 
 package gmf
@@ -41,8 +42,9 @@ var (
 // Functions prototypes for custom IO. Implement necessary prototypes and pass instance pointer to NewAVIOContext.
 //
 // E.g.:
-// 	func gridFsReader() ([]byte, int) {
-// 		... implementation ...
+//
+//	func gridFsReader() ([]byte, int) {
+//		... implementation ...
 //		return data, length
 //	}
 //

@@ -1,5 +1,3 @@
-// +build go1.6,!go1.12
-
 package gmf
 
 /*
@@ -64,11 +62,11 @@ func (ctx *SwsCtx) Scale(src *Frame, dst *Frame) {
 	C.sws_scale(
 		ctx.swsCtx,
 		(**C.uint8_t)(unsafe.Pointer(&src.avFrame.data)),
-		(*_Ctype_int)(unsafe.Pointer(&src.avFrame.linesize)),
+		(*C.int)(unsafe.Pointer(&src.avFrame.linesize)),
 		0,
 		C.int(src.Height()),
 		(**C.uint8_t)(unsafe.Pointer(&dst.avFrame.data)),
-		(*_Ctype_int)(unsafe.Pointer(&dst.avFrame.linesize)))
+		(*C.int)(unsafe.Pointer(&dst.avFrame.linesize)))
 }
 
 func (ctx *SwsCtx) Free() {
